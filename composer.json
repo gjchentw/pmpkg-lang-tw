@@ -3,7 +3,7 @@
     "friendly_name": "pmpkg-lang-tw",
     "description": "ProcessMaker Language Package for zh_TW (Taiwan)",
     "license": "AGPL-3.0-or-later",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "type": "project",
     "authors": [
         {
