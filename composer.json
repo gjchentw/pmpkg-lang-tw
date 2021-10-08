@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ProcessMaker\\Package\\PmpkgLangTw\\Translations",
+                "ProcessMaker\\Package\\Translations\\PackageServiceProvider",
                 "ProcessMaker\\Package\\PmpkgLangTw\\PackageServiceProvider"
             ]
         }
