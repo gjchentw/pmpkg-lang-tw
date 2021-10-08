@@ -35,11 +35,11 @@ class PackageServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang'),
+            __DIR__.'/../../../resources/lang' => resource_path('lang'),
         ], 'pmpkg-lang-tw');
 
         $packageLanguage = app()->make('ProcessMaker\Package\PackageLanguage');
-        $packageLanguage->registerPath(__DIR__.'/../resources/lang');
+        $packageLanguage->registerPath(__DIR__.'/../../../resources/lang');
 
         $this->app['events']->listen(PackageEvent::class, PackageListener::class);
 
