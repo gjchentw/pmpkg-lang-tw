@@ -2,14 +2,14 @@
 namespace ProcessMaker\Package\PmpkgLangTw;
 
 use Illuminate\Support\ServiceProvider;
-use ProcessMaker\Package\Packages\Events\PackageEvent;
-use ProcessMaker\Package\PmpkgLangTw\Listeners\PackageListener;
+use ProcessMaker\Traits\PluginServiceProviderTrait;
 
 class PackageServiceProvider extends ServiceProvider
 {
+    use PluginServiceProviderTrait;
 
-    // Assign the default namespace for our controllers
-    protected $namespace = '\ProcessMaker\Package\PmpkgLangTw\Http\Controllers';
+    const name = "Language Package (TW)"
+    const version = "0.0.8"
 
     /**
      * If your plugin will provide any services, you can register them here.
@@ -30,10 +30,6 @@ class PackageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if ($this->app->runningInConsole()) {
-        } else {
-        }
-
         $this->publishes([
             __DIR__.'/../../../resources/lang' => resource_path('lang'),
         ], 'pmpkg-lang-tw');
@@ -41,7 +37,6 @@ class PackageServiceProvider extends ServiceProvider
         $packageLanguage = app()->make('ProcessMaker\Package\PackageLanguage');
         $packageLanguage->registerPath(__DIR__.'/../../../resources/lang');
 
-        $this->app['events']->listen(PackageEvent::class, PackageListener::class);
-
+        $this->completePluginBoot();
     }
 }
