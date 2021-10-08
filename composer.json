@@ -1,0 +1,32 @@
+{
+    "name": "gjchen/pmpkg-lang-tw",
+    "friendly_name": "pmpkg-lang-tw",
+    "description": "ProcessMaker Language Package for zh_TW (Taiwan)",
+    "license": "AGPL-3.0-or-later",
+    "version": "0.0.1",
+    "type": "project",
+    "authors": [
+        {
+            "name": "gjchen",
+            "email": "gjchen.tw@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "ProcessMaker\\Package\\Translations\\": "src/Providers/Translations",
+            "ProcessMaker\\Package\\PmpkgLangTw\\": "src/Providers/PmpkgLangTw"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ProcessMaker\\Package\\PmpkgLangTw\\Translations",
+                "ProcessMaker\\Package\\PmpkgLangTw\\PackageServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+    }
+}
