@@ -8,8 +8,8 @@ class PackageServiceProvider extends ServiceProvider
 {
     use PluginServiceProviderTrait;
 
-    const name = "Language Package (TW)"
-    const version = "0.0.8"
+    const name = "Language Package (TW)";
+    const version = "0.0.8";
 
     /**
      * If your plugin will provide any services, you can register them here.
